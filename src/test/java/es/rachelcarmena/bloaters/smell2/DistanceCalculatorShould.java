@@ -15,7 +15,9 @@ public class DistanceCalculatorShould {
 
     @Test
     public void calculate_distance_between_points() {
-        double distance = distanceCalculator.betweenPoints(1, 5, 2, 8);
+        Point aPoint = new Point(1, 5);
+        Point anotherPoint = new Point(2, 8);
+        double distance = distanceCalculator.betweenPoints(aPoint, anotherPoint);
 
         assertEquals(3.16, distance, 0.01);
     }
