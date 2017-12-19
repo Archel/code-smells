@@ -5,7 +5,7 @@ public class DistanceCalculator {
         return Math.sqrt(Math.pow((point2.x() - point1.y()), 2) + Math.pow(point2.x() - point1.x(), 2));
     }
 
-    public double toOriginFrom(int x, int y) {
-        return Math.sqrt(Math.pow(y, 2) + Math.pow(x, 2));
+    public double toOriginFrom(Point point) {
+        return Math.sqrt(Math.pow(point.y(), 2) + Math.pow(point.x(), 2));
     }
 }
