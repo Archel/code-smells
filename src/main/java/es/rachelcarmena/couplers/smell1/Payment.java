@@ -1,5 +1,6 @@
 package es.rachelcarmena.couplers.smell1;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class Payment {
@@ -29,5 +30,9 @@ public class Payment {
 
     public LocalDate getDate() {
         return date;
+    }
+
+    public BigDecimal getAmountValue() {
+        return amount.getValue();
     }
 }

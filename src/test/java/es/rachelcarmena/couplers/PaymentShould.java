@@ -15,7 +15,7 @@ public class PaymentShould {
     @Test
     public void allow_get_amount_with_2_decimals() {
         Payment payment = new Payment("000012", "12.4563", "OneMethod", LocalDate.now());
-        BigDecimal paymentValue = payment.getAmount().getValue();
+        BigDecimal paymentValue = payment.getAmountValue();
         String printedValue = paymentValue.setScale(2, BigDecimal.ROUND_HALF_EVEN).toString();
 
         assertThat(printedValue, is("12.46"));
@@ -24,7 +24,7 @@ public class PaymentShould {
     @Test
     public void allow_get_amount_with_2_decimals_when_no_decimals() {
         Payment payment = new Payment("000012", "18", "OneMethod", LocalDate.now());
-        BigDecimal paymentValue = payment.getAmount().getValue();
+        BigDecimal paymentValue = payment.getAmountValue();
         String printedValue = paymentValue.setScale(2, BigDecimal.ROUND_HALF_EVEN).toString();
 
         assertThat(printedValue, is("18.00"));
