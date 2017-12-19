@@ -2,17 +2,19 @@ package es.rachelcarmena.bloaters.smell1;
 
 import org.junit.Test;
 
-import java.math.BigDecimal;
-
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class WithdrawShould {
 
+    public static final double AN_AMOUNT = 560d;
+
     @Test
     public void keep_the_amount() {
-        Withdraw withdraw = new Withdraw(560d);
+        Amount amount = new Amount(AN_AMOUNT);
+        Withdraw withdraw = new Withdraw(amount);
 
-        assertThat(withdraw.getAmount(), is(560d));
+        assertThat(withdraw.getAmount(), is(equalTo(amount)));
     }
 }
