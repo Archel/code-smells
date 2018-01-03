@@ -1,8 +1,8 @@
 package es.rachelcarmena.bloaters.smell2;
 
 public class DistanceCalculator {
-    public double betweenPoints(Point point1, Point point2) {
-        return Math.sqrt(Math.pow((point2.x() - point1.y()), 2) + Math.pow(point2.x() - point1.x(), 2));
+    public double betweenPoints(Point from, Point to) {
+        return Math.sqrt(Math.pow((to.x() - from.y()), 2) + Math.pow(to.x() - from.x(), 2));
     }
 
     public double toOriginFrom(Point point) {
