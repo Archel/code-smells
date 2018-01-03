@@ -2,7 +2,6 @@ package es.rachelcarmena.bloaters.smell1;
 
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -15,6 +14,6 @@ public class WithdrawShould {
         Amount amount = new Amount(AN_AMOUNT);
         Withdraw withdraw = new Withdraw(amount);
 
-        assertThat(withdraw.getAmount(), is(equalTo(amount)));
+        assertThat(withdraw.getAmount(), is(amount));
     }
 }
