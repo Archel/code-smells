@@ -1,6 +1,7 @@
 package es.rachelcarmena.couplers.smell1;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Currency;
 
 public class Amount {
@@ -22,5 +23,10 @@ public class Amount {
 
     public Currency getCurrency() {
         return currency;
+    }
+
+    @Override
+    public String toString() {
+        return value.setScale(2, RoundingMode.HALF_EVEN).toString();
     }
 }

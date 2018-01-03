@@ -32,7 +32,7 @@ public class Payment {
         return date;
     }
 
-    public BigDecimal getAmountValue() {
-        return amount.getValue();
+    public String getFormattedAmount() {
+        return amount.toString();
     }
 }

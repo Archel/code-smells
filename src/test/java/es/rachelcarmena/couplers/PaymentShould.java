@@ -3,8 +3,6 @@ package es.rachelcarmena.couplers;
 import es.rachelcarmena.couplers.smell1.Payment;
 import org.junit.Test;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.time.LocalDate;
 
 import static org.hamcrest.core.Is.is;
@@ -16,8 +14,7 @@ public class PaymentShould {
     @Test
     public void allow_get_amount_with_2_decimals() {
         Payment payment = new Payment("000012", "12.4563", "OneMethod", LocalDate.now());
-        BigDecimal paymentValue = payment.getAmountValue();
-        String printedValue = paymentValue.setScale(2, RoundingMode.HALF_EVEN).toString();
+        String printedValue = payment.getFormattedAmount();
 
         assertThat(printedValue, is("12.46"));
     }
@@ -25,8 +22,7 @@ public class PaymentShould {
     @Test
     public void allow_get_amount_with_2_decimals_when_no_decimals() {
         Payment payment = new Payment("000012", "18", "OneMethod", LocalDate.now());
-        BigDecimal paymentValue = payment.getAmountValue();
-        String printedValue = paymentValue.setScale(2, RoundingMode.HALF_EVEN).toString();
+        String printedValue = payment.getFormattedAmount();
 
         assertThat(printedValue, is("18.00"));
     }
