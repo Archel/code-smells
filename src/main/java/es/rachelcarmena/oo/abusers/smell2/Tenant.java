@@ -1,6 +1,6 @@
 package es.rachelcarmena.oo.abusers.smell2;
 
-public class Tenant {
+abstract class Tenant {
     private final String name;
     protected final int deposit;
 
@@ -9,7 +9,5 @@ public class Tenant {
         this.deposit = deposit;
     }
 
-    public int calculateDepositAfterRenting() {
-        return deposit;
-    }
+    abstract int calculateDepositAfterRenting();
 }

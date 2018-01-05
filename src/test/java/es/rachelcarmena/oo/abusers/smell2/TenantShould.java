@@ -16,7 +16,7 @@ public class TenantShould {
 
     @Test
     public void same_deposit_after_renting_when_normal_tenant() {
-        Tenant tenant = new Tenant("Not Me", 1000);
+        Tenant tenant = new NormalTenant("Not Me", 1000);
 
         assertThat(tenant.calculateDepositAfterRenting(), is(1000));
     }
