@@ -13,8 +13,8 @@ public class Printer {
     }
 
     private void printDetails(User user) {
-        console.print("name:" + user.name);
-        console.print("surname:" + user.surname);
+        console.print("name:" + user.getName());
+        console.print("surname:" + user.getSurname());
     }
 
     private void printBanner() {
