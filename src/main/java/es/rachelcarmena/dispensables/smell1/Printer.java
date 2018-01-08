@@ -9,8 +9,10 @@ public class Printer {
 
     public void printUser(User user) {
         printBanner();
+        printDetails(user);
+    }
 
-        //print details
+    private void printDetails(User user) {
         console.print("name:" + user.name);
         console.print("surname:" + user.surname);
     }
