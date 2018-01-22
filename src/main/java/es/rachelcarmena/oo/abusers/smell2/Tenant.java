@@ -4,7 +4,7 @@ abstract class Tenant {
     private final String name;
     protected final int deposit;
 
-    public Tenant(String name, int deposit) {
+    protected Tenant(String name, int deposit) {
         this.name = name;
         this.deposit = deposit;
     }
